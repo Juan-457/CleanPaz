@@ -922,10 +922,11 @@
     .global-bg-slide {
       position: absolute; inset: 0;
       background-size: cover; background-position: center;
-      opacity: 0;
-      transition: opacity 1.8s ease;
+      opacity: 0; z-index: 0;
+      transition: opacity 2s ease;
     }
-    .global-bg-slide.active { opacity: 1; }
+    .global-bg-slide.active { opacity: 1; z-index: 2; }
+    .global-bg-slide.prev   { opacity: 1; z-index: 1; }
     .global-bg-overlay {
       position: fixed; inset: 0; z-index: -1;
       background: rgba(8,13,30,.52);
@@ -1705,14 +1706,24 @@
   }, { threshold: 0.5 });
   document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
 
-  // Global background slider (post-hero sections)
+  // Global background slider — crossfade sin negro
   (function() {
     const slides = document.querySelectorAll('.global-bg-slide');
     let current = 0;
+    const TRANSITION = 2000; // ms — must match CSS transition
+
     setInterval(() => {
+      // Mantener imagen actual visible debajo mientras entra la nueva
       slides[current].classList.remove('active');
+      slides[current].classList.add('prev');
+
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
+      slides[current].classList.remove('prev');
+
+      // Recién cuando la transición termina, quitar prev
+      const prev = current === 0 ? slides.length - 1 : current - 1;
+      setTimeout(() => slides[prev].classList.remove('prev'), TRANSITION);
     }, 5000);
 
     // Hide global bg when hero is visible, show when scrolled past
