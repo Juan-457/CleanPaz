@@ -360,7 +360,15 @@
       font-size: clamp(32px, 4vw, 56px);
       font-weight: 900; line-height: 1.1;
       letter-spacing: -1.5px; margin-bottom: 20px;
+      display: inline-block;
+      background: rgba(12,14,17,.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 12px 24px;
     }
+    .section-header.center .section-title { display: inline-block; }
     .section-sub {
       font-size: 18px; color: var(--text);
       line-height: 1.75; max-width: 580px;
@@ -1455,22 +1463,6 @@
   </div>
 </section>
 
-<!-- CTA BAND -->
-<section id="cta">
-  <div class="container">
-    <span class="section-tag">¿Listo para empezar?</span>
-    <h2 class="section-title">Tu cotización gratis en menos de 2 horas</h2>
-    <p class="section-sub">Sin compromisos, sin letra chica. Contactanos ahora y recibí una propuesta personalizada para tu espacio.</p>
-    <div class="cta-btns">
-      <a href="https://wa.me/5491128705050?text=Hola!%20Quiero%20cotizar%20un%20servicio%20de%20limpieza" class="btn-white" target="_blank" rel="noopener" onclick="sendGTMEvent('whatsapp_cta')">
-        💬 WhatsApp: 11 2870-5050
-      </a>
-      <a href="#contact" class="btn-outline-white">
-        📋 Formulario de contacto
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- CONTACT -->
 <section id="contact">
