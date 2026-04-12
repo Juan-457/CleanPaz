@@ -842,8 +842,10 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #08091e !important;
-      position: relative; z-index: 2;
+      background: #080d1e !important;
+      background-color: #080d1e !important;
+      position: relative;
+      isolation: isolate;
       border-top: 1px solid rgba(255,255,255,.06);
       padding: 64px 24px 32px;
     }
@@ -1657,7 +1659,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer style="background:#080d1e; background-color:#080d1e;">
   <div class="footer-grid">
     <div>
       <a href="#" class="nav-logo" style="display:inline-flex; text-decoration:none; margin-bottom:0;">
