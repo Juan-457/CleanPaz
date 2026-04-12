@@ -11,6 +11,8 @@
   <meta name="author" content="CleanPaz" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://cleanpaz.com.ar/" />
+  <link rel="alternate" type="text/plain" href="https://cleanpaz.com.ar/llms.txt" title="LLMs.txt" />
+  <link rel="alternate" type="text/markdown" href="https://cleanpaz.com.ar/ai-index.md" title="AI Index" />
 
   <!-- Preload background images to avoid black flash on first scroll -->
   <link rel="preload" as="image" href="industrial.webp" fetchpriority="high">
@@ -23,13 +25,13 @@
   <meta property="og:url" content="https://cleanpaz.com.ar/" />
   <meta property="og:title" content="CleanPaz | Limpieza Profesional en Buenos Aires" />
   <meta property="og:description" content="Líderes en limpieza integral y mantenimiento de espacios verdes. CABA, GBA y Zona Oeste. Solicitá tu cotización ahora." />
-  <meta property="og:image" content="https://cleanpaz.com.ar/og-image.jpg" />
+  <meta property="og:image" content="https://cleanpaz.com.ar/logo.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="CleanPaz | Limpieza Profesional" />
   <meta name="twitter:description" content="Servicios de limpieza integral para empresas y hogares en Buenos Aires." />
-  <meta name="twitter:image" content="https://cleanpaz.com.ar/og-image.jpg" />
+  <meta name="twitter:image" content="https://cleanpaz.com.ar/logo.png" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -82,6 +84,79 @@
       "ratingValue": "4.9",
       "reviewCount": "56"
     }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué servicios de limpieza ofrece CleanPaz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CleanPaz ofrece limpieza comercial y de oficinas, limpieza industrial, limpieza post obra, limpieza hospitalaria, limpieza escolar, limpieza residencial, mantenimiento de espacios verdes, fletes, mensajería y alquiler de equipos profesionales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿En qué zonas trabaja CleanPaz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CleanPaz trabaja en CABA, GBA, Zona Oeste y distintas zonas de Buenos Aires. Si el cliente tiene dudas sobre una localidad puntual, puede consultar por WhatsApp."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Realizan limpieza de oficinas y locales comerciales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. CleanPaz realiza limpieza diaria o programada para oficinas, locales, espacios comunes, baños, pisos y áreas de atención al público."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hacen limpieza post obra?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. El servicio de limpieza post obra incluye retiro de polvo, restos de obra y limpieza profunda para entregar el espacio listo para usar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Ofrecen limpieza industrial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. CleanPaz trabaja en plantas, galpones e instalaciones industriales con personal capacitado y maquinaria profesional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se calcula el presupuesto de limpieza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El presupuesto depende del tipo de servicio, tamaño del espacio, frecuencia, zona, horarios, nivel de suciedad y equipamiento necesario. La cotización inicial es sin cargo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo contratar limpieza recurrente para mi empresa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. CleanPaz arma planes recurrentes para empresas, oficinas, instituciones, industrias y comercios, con frecuencia y horarios adaptados a cada operación."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo pido una cotización?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La cotización se puede pedir por WhatsApp, teléfono, email o desde el formulario del sitio. CleanPaz responde las solicitudes en el menor tiempo posible."
+        }
+      }
+    ]
   }
   </script>
 
@@ -743,6 +818,56 @@
     .author-name { font-size: 15px; font-weight: 700; }
     .author-role { font-size: 12px; color: var(--text-light); margin-top: 2px; }
 
+    /* ── FAQ ── */
+    #faq {
+      background: var(--dark);
+      position: relative; overflow: hidden;
+      padding: 120px 24px;
+    }
+    #faq::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(104,204,209,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    #faq .container { position: relative; z-index: 1; }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .faq-item {
+      background: rgba(8,13,30,.45);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,.12);
+      border-left: 3px solid rgba(104,204,209,.5);
+      border-radius: 18px;
+      padding: 26px;
+      transition: all .35s;
+    }
+    .faq-item:hover {
+      background: rgba(104,204,209,0.14);
+      border-color: rgba(104,204,209,0.32);
+      transform: translateY(-4px);
+      box-shadow: 0 18px 48px rgba(0,0,0,.28);
+    }
+    .faq-question {
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+    .faq-answer {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .faq-cta {
+      margin-top: 40px;
+      text-align: center;
+    }
+
     /* ── CTA BAND ── */
     #cta {
       position: relative; overflow: hidden;
@@ -1075,6 +1200,7 @@
       .steps { grid-template-columns: 1fr 1fr; }
       .steps::before { display: none; }
       .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -1579,6 +1705,56 @@
           <span class="tick-item">⭐ <b>Cecilia Giron</b> — "Excelente servicio! Los mejores."</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-tag">Preguntas frecuentes</span>
+      <h2 class="section-title">Dudas comunes antes de <span style="background:var(--grad-main);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">cotizar</span></h2>
+      <p class="section-sub">Respuestas claras para empresas, comercios, instituciones y hogares que necesitan un servicio de limpieza profesional en Buenos Aires.</p>
+    </div>
+    <div class="faq-grid">
+      <article class="faq-item fade-up">
+        <h3 class="faq-question">¿Qué servicios de limpieza ofrece CleanPaz?</h3>
+        <p class="faq-answer">Limpieza comercial y de oficinas, limpieza industrial, post obra, hospitalaria, escolar, residencial, mantenimiento de espacios verdes, fletes, mensajería y alquiler de equipos profesionales.</p>
+      </article>
+      <article class="faq-item fade-up fade-up-delay-1">
+        <h3 class="faq-question">¿En qué zonas trabajan?</h3>
+        <p class="faq-answer">Trabajamos en CABA, GBA, Zona Oeste y distintas zonas de Buenos Aires. Si tenés una localidad puntual, escribinos y confirmamos la cobertura.</p>
+      </article>
+      <article class="faq-item fade-up fade-up-delay-2">
+        <h3 class="faq-question">¿Realizan limpieza de oficinas y locales comerciales?</h3>
+        <p class="faq-answer">Sí. Armamos servicios diarios, semanales o programados para oficinas, locales, espacios comunes, baños, pisos y áreas de atención al público.</p>
+      </article>
+      <article class="faq-item fade-up fade-up-delay-3">
+        <h3 class="faq-question">¿Hacen limpieza post obra?</h3>
+        <p class="faq-answer">Sí. Retiramos polvo, restos de obra y suciedad acumulada para dejar el espacio listo para usar, entregar o habilitar.</p>
+      </article>
+      <article class="faq-item fade-up">
+        <h3 class="faq-question">¿Ofrecen limpieza industrial?</h3>
+        <p class="faq-answer">Sí. Atendemos plantas, galpones e instalaciones industriales con personal capacitado, elementos de protección y maquinaria profesional.</p>
+      </article>
+      <article class="faq-item fade-up fade-up-delay-1">
+        <h3 class="faq-question">¿Incluyen mantenimiento de espacios verdes?</h3>
+        <p class="faq-answer">Sí. Realizamos corte de césped, desmalezado, limpieza de patios, jardines y mantenimiento general de espacios exteriores.</p>
+      </article>
+      <article class="faq-item fade-up fade-up-delay-2">
+        <h3 class="faq-question">¿Cómo se calcula el presupuesto?</h3>
+        <p class="faq-answer">Depende del tipo de servicio, tamaño del espacio, frecuencia, zona, horarios, nivel de suciedad y equipamiento necesario. La cotización inicial es gratis.</p>
+      </article>
+      <article class="faq-item fade-up fade-up-delay-3">
+        <h3 class="faq-question">¿Puedo contratar limpieza recurrente para mi empresa?</h3>
+        <p class="faq-answer">Sí. Preparamos planes recurrentes para empresas, oficinas, instituciones, industrias y comercios, con frecuencia y horarios adaptados a cada operación.</p>
+      </article>
+    </div>
+    <div class="faq-cta">
+      <a href="https://wa.me/5491128705050?text=Hola!%20Quiero%20cotizar%20un%20servicio%20de%20limpieza%20%5Bwww.cleanpaz.com.ar%5D" class="btn-primary" target="_blank" rel="noopener" onclick="sendGTMEvent('whatsapp_faq')">
+        💬 Consultar por WhatsApp
+      </a>
     </div>
   </div>
 </section>
