@@ -373,6 +373,32 @@
     /* ── SECTION COMMON ── */
     section { padding: 120px 24px; }
     .container { max-width: 1200px; margin: 0 auto; }
+    .post-hero-shell {
+      padding: clamp(36px, 5vw, 72px) 18px clamp(72px, 7vw, 112px);
+      position: relative;
+      z-index: 1;
+    }
+    .post-hero-bubble {
+      max-width: 1440px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 32px;
+      background:
+        linear-gradient(180deg, rgba(8,13,30,.78) 0%, rgba(12,14,17,.70) 52%, rgba(8,13,30,.82) 100%);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 36px 110px rgba(0,0,0,.45);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .post-hero-bubble > section {
+      background: transparent !important;
+    }
+    .post-hero-bubble > section:first-child {
+      padding-top: clamp(72px, 7vw, 112px);
+    }
+    .post-hero-bubble > section:last-child {
+      padding-bottom: clamp(72px, 7vw, 112px) !important;
+    }
     .section-tag {
       display: inline-block;
       background: rgba(104,204,209,.12);
@@ -970,7 +996,7 @@
     }
     .global-bg, .global-bg-overlay { transition: opacity 1.2s ease; }
     /* All sections after hero need transparent bg to show global bg */
-    #services, #why, #how, #zones, #testimonials, #contact {
+    #services, #why, #how, #zones, #testimonials, #contact, #instagram {
       background: transparent !important;
     }
     footer {
@@ -1057,6 +1083,8 @@
       .nav-links { display: none; }
       .hamburger { display: flex; }
       .hero-stats { gap: 20px; }
+      .post-hero-shell { padding: 24px 10px 72px; }
+      .post-hero-bubble { border-radius: 22px; }
       .form-row { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
@@ -1064,6 +1092,8 @@
     }
     @media (max-width: 480px) {
       section { padding: 64px 16px; }
+      .post-hero-shell { padding: 18px 8px 56px; }
+      .post-hero-bubble { border-radius: 16px; }
       .steps { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
     }
@@ -1193,6 +1223,9 @@
     </div>
   </div>
 </section>
+
+<main class="post-hero-shell" aria-label="Contenido principal">
+  <div class="post-hero-bubble">
 
 <!-- SERVICES -->
 <section id="services">
@@ -1667,6 +1700,9 @@
     </div>
   </div>
 </section>
+
+  </div>
+</main>
 
 <!-- FOOTER -->
 <footer style="background:#080d1e; background-color:#080d1e;">
