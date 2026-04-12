@@ -1082,7 +1082,28 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-stats { gap: 20px; }
+      #hero { padding: 120px 16px 72px; min-height: auto; }
+      .hero-bubble { padding: 20px 18px; margin-bottom: 18px; border-radius: 16px; }
+      .hero-badge { font-size: 10px; letter-spacing: 1.2px; padding: 5px 12px; }
+      .hero-title { font-size: clamp(38px, 11vw, 52px); letter-spacing: -1px; margin-bottom: 14px; }
+      .hero-sub { font-size: 16px; line-height: 1.65; }
+      .hero-btns { flex-direction: column; align-items: stretch; gap: 10px; }
+      .hero-btns .btn-primary,
+      .hero-btns .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 14px 20px;
+      }
+      .hero-stats {
+        margin-top: 26px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .hero-stat { padding: 14px 8px; align-items: center; text-align: center; }
+      .hero-stat-num { font-size: clamp(24px, 6vw, 30px); }
+      .hero-stat-label { font-size: 10px; letter-spacing: .7px; }
       .post-hero-shell { padding: 24px 10px 72px; }
       .post-hero-bubble { border-radius: 22px; }
       .form-row { grid-template-columns: 1fr; }
@@ -1092,10 +1113,18 @@
     }
     @media (max-width: 480px) {
       section { padding: 64px 16px; }
+      #hero { padding: 110px 10px 54px; }
+      .hero-bubble { padding: 16px 12px; }
+      .hero-title { font-size: clamp(32px, 10.5vw, 42px); }
+      .hero-sub { font-size: 15px; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .hero-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
+      .hero-stat:last-child { border-bottom: none; }
       .post-hero-shell { padding: 18px 8px 56px; }
       .post-hero-bubble { border-radius: 16px; }
       .steps { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
+      .wa-float { right: 14px; bottom: 16px; width: 56px; height: 56px; }
     }
   </style>
 </head>
