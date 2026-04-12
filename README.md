@@ -73,7 +73,7 @@ El formulario no guarda datos ni envia emails. Valida nombre, telefono y servici
 Contactos visibles en la pagina:
 
 - Telefonos: `11 2870-5050`, `11 2846-3882`
-- Emails: `cleanpaz81@gmail.com`, `cleanpaz34@gmail.com`
+- Emails: `administracion@cleanpaz.com.ar`, `presupuestos@cleanpaz.com.ar`
 
 ### Redes sociales
 
