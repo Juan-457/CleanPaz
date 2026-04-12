@@ -370,7 +370,28 @@
     .section-header.center .section-sub { margin: 0 auto; }
 
     /* ── SERVICES ── */
-    #services { background: var(--dark2); }
+    #services {
+      background: var(--dark2);
+      position: relative; overflow: hidden;
+    }
+    .services-bg {
+      position: absolute; inset: 0; z-index: 0;
+    }
+    .services-bg-slide {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      opacity: 0;
+      transition: opacity 1.4s ease;
+    }
+    .services-bg-slide.active { opacity: 1; }
+    .services-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to bottom,
+        rgba(15,22,40,.88) 0%,
+        rgba(15,22,40,.80) 50%,
+        rgba(15,22,40,.92) 100%);
+    }
+    #services .container { position: relative; z-index: 2; }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -959,6 +980,13 @@
 
 <!-- SERVICES -->
 <section id="services">
+  <div class="services-bg">
+    <div class="services-bg-slide active" style="background-image:url('industrial.webp')"></div>
+    <div class="services-bg-slide" style="background-image:url('oficina.webp')"></div>
+    <div class="services-bg-slide" style="background-image:url('post%20obra.webp')"></div>
+    <div class="services-bg-slide" style="background-image:url('verdes.webp')"></div>
+  </div>
+  <div class="services-overlay"></div>
   <div class="container">
     <div class="section-header center">
       <span class="section-tag">Lo que hacemos</span>
@@ -1521,6 +1549,17 @@
     });
   }, { threshold: 0.5 });
   document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+  // Services background slider
+  (function() {
+    const slides = document.querySelectorAll('.services-bg-slide');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+  })();
 
   // Form submit — redirect to WhatsApp
   function submitForm() {
