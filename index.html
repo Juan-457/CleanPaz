@@ -203,13 +203,25 @@
       gap: 64px; align-items: center;
       position: relative; z-index: 2;
     }
+    .hero-bubble {
+      display: inline-block;
+      background: rgba(12,14,17,.7);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,.1);
+      border-top: 2px solid rgba(104,204,209,.5);
+      border-radius: 20px;
+      padding: 28px 36px;
+      margin-bottom: 32px;
+    }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(104,204,209,0.13);
-      border: 1px solid rgba(104,204,209,0.26);
-      border-radius: 50px; padding: 6px 16px;
-      font-size: 13px; font-weight: 500; color: var(--blue-light);
-      margin-bottom: 24px;
+      background: rgba(104,204,209,.12);
+      border: 1px solid rgba(104,204,209,.4);
+      border-radius: 50px; padding: 5px 16px;
+      font-size: 11px; font-weight: 700; color: var(--blue-light);
+      text-transform: uppercase; letter-spacing: 2px;
+      margin-bottom: 16px;
     }
     .hero-badge::before {
       content: '';
@@ -233,10 +245,9 @@
       background-clip: text;
     }
     .hero-sub {
-      font-size: 18px; color: rgba(255,255,255,.85);
-      line-height: 1.7; margin-bottom: 40px;
-      max-width: 520px;
-      text-shadow: 0 1px 12px rgba(0,0,0,.5);
+      font-size: 17px; color: var(--text);
+      line-height: 1.75; max-width: 100%;
+      margin-bottom: 0;
     }
     .hero-btns {
       display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
@@ -1087,14 +1098,16 @@
   <div class="hero-grid"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-badge">Líderes en Buenos Aires desde 2020</div>
-      <h1 class="hero-title">
-        Espacios <span class="grad">impecables,</span><br>
-        resultados garantizados
-      </h1>
-      <p class="hero-sub">
-        Limpieza profesional para empresas, industrias y hogares en CABA, GBA y Zona Oeste. Personal capacitado, maquinaria de última generación y servicio personalizado.
-      </p>
+      <div class="hero-bubble">
+        <div class="hero-badge">Líderes en Buenos Aires desde 2020</div>
+        <h1 class="hero-title">
+          Espacios <span class="grad">impecables,</span><br>
+          resultados garantizados
+        </h1>
+        <p class="hero-sub">
+          Limpieza profesional para empresas, industrias y hogares en CABA, GBA y Zona Oeste. Personal capacitado, maquinaria de última generación y servicio personalizado.
+        </p>
+      </div>
       <div class="hero-btns">
         <a href="https://wa.me/5491128705050?text=Hola!%20Quiero%20cotizar%20un%20servicio%20de%20limpieza" class="btn-primary" target="_blank" rel="noopener" onclick="gtag_report_conversion('whatsapp_hero')">
           💬 Cotizá por WhatsApp
