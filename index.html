@@ -1104,12 +1104,18 @@
       .hero-stat { padding: 14px 8px; align-items: center; text-align: center; }
       .hero-stat-num { font-size: clamp(24px, 6vw, 30px); }
       .hero-stat-label { font-size: 10px; letter-spacing: .7px; }
-      .post-hero-shell { padding: 12px 0 36px; gap: 12px; }
+      .post-hero-shell { padding: 12px 0 36px; gap: 16px; }
       .post-hero-shell > section { border-radius: 24px; }
       .form-row { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
       .zone-cards { grid-template-columns: 1fr 1fr; }
+      /* Mobile: ocultar sección "Cómo funciona" */
+      #how { display: none; }
+      /* Mobile: ocultar panel de stats en "Por qué nosotros" */
+      .why-visual { display: none; }
+      /* Mobile: mostrar solo 2 testimonios */
+      .testimonials-grid .testimonial-card:nth-child(n+3) { display: none; }
     }
     @media (max-width: 480px) {
       section { padding: 64px 16px; }
@@ -1120,7 +1126,7 @@
       .hero-stats { grid-template-columns: 1fr; }
       .hero-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
       .hero-stat:last-child { border-bottom: none; }
-      .post-hero-shell { padding: 8px 0 28px; gap: 8px; }
+      .post-hero-shell { padding: 8px 0 28px; gap: 16px; }
       .post-hero-shell > section { border-radius: 16px; }
       .steps { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
