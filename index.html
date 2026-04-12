@@ -879,6 +879,35 @@
     }
     .tick-item b { color: var(--white); margin-right: 4px; }
 
+    /* ── GLOBAL BG SLIDER (post-hero) ── */
+    .global-bg {
+      position: fixed; inset: 0; z-index: -2;
+      pointer-events: none;
+    }
+    .global-bg-slide {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      opacity: 0;
+      transition: opacity 1.8s ease;
+    }
+    .global-bg-slide.active { opacity: 1; }
+    .global-bg-overlay {
+      position: fixed; inset: 0; z-index: -1;
+      background: rgba(8,13,30,.82);
+      pointer-events: none;
+    }
+    /* Hide global bg while hero is in view */
+    body.hero-visible .global-bg,
+    body.hero-visible .global-bg-overlay { opacity: 0; }
+    .global-bg, .global-bg-overlay { transition: opacity .6s ease; }
+    /* All sections after hero need transparent bg to show global bg */
+    #services, #why, #how, #zones, #testimonials, #contact, footer {
+      background: transparent !important;
+    }
+    #cta {
+      background: linear-gradient(135deg, rgba(13,53,212,.92) 0%, rgba(22,72,255,.9) 40%, rgba(62,181,187,.88) 100%) !important;
+    }
+
     /* ── WHATSAPP FLOAT ── */
     .wa-float {
       position: fixed; bottom: 28px; right: 28px; z-index: 999;
@@ -969,6 +998,15 @@
 </head>
 
 <body>
+<!-- Global background slider (all sections after hero) -->
+<div class="global-bg">
+  <div class="global-bg-slide active" style="background-image:url('industrial.webp')"></div>
+  <div class="global-bg-slide" style="background-image:url('oficina.webp')"></div>
+  <div class="global-bg-slide" style="background-image:url('post%20obra.webp')"></div>
+  <div class="global-bg-slide" style="background-image:url('verdes.webp')"></div>
+</div>
+<div class="global-bg-overlay"></div>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRW2TPQR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
@@ -1081,13 +1119,6 @@
 
 <!-- SERVICES -->
 <section id="services">
-  <div class="services-bg">
-    <div class="services-bg-slide active" style="background-image:url('industrial.webp')"></div>
-    <div class="services-bg-slide" style="background-image:url('oficina.webp')"></div>
-    <div class="services-bg-slide" style="background-image:url('post%20obra.webp')"></div>
-    <div class="services-bg-slide" style="background-image:url('verdes.webp')"></div>
-  </div>
-  <div class="services-overlay"></div>
   <div class="container">
     <div class="section-header center">
       <span class="section-tag">Lo que hacemos</span>
@@ -1651,15 +1682,22 @@
   }, { threshold: 0.5 });
   document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
 
-  // Services background slider
+  // Global background slider (post-hero sections)
   (function() {
-    const slides = document.querySelectorAll('.services-bg-slide');
+    const slides = document.querySelectorAll('.global-bg-slide');
     let current = 0;
     setInterval(() => {
       slides[current].classList.remove('active');
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
-    }, 4000);
+    }, 5000);
+
+    // Hide global bg when hero is visible, show when scrolled past
+    const hero = document.getElementById('hero');
+    const io = new IntersectionObserver(entries => {
+      document.body.classList.toggle('hero-visible', entries[0].isIntersecting);
+    }, { threshold: 0.1 });
+    io.observe(hero);
   })();
 
   // Form submit — redirect to WhatsApp
