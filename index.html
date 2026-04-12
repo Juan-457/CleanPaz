@@ -374,7 +374,11 @@
     section { padding: 120px 24px; }
     .container { max-width: 1200px; margin: 0 auto; }
     .post-hero-shell {
-      padding: clamp(16px, 2vw, 28px) clamp(12px, 2.5vw, 52px) clamp(28px, 4vw, 52px);
+      padding: clamp(16px, 2vw, 28px) 0 clamp(28px, 4vw, 52px);
+      width: calc(100% - clamp(24px, 5vw, 96px));
+      max-width: 1360px;
+      margin-left: auto;
+      margin-right: auto;
       position: relative;
       z-index: 1;
       display: flex;
@@ -1100,7 +1104,7 @@
       .hero-stat { padding: 14px 8px; align-items: center; text-align: center; }
       .hero-stat-num { font-size: clamp(24px, 6vw, 30px); }
       .hero-stat-label { font-size: 10px; letter-spacing: .7px; }
-      .post-hero-shell { padding: 12px 10px 36px; gap: 12px; }
+      .post-hero-shell { padding: 12px 0 36px; gap: 12px; }
       .post-hero-shell > section { border-radius: 24px; }
       .form-row { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
@@ -1116,7 +1120,7 @@
       .hero-stats { grid-template-columns: 1fr; }
       .hero-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
       .hero-stat:last-child { border-bottom: none; }
-      .post-hero-shell { padding: 8px 6px 28px; gap: 8px; }
+      .post-hero-shell { padding: 8px 0 28px; gap: 8px; }
       .post-hero-shell > section { border-radius: 16px; }
       .steps { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
