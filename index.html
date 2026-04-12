@@ -691,6 +691,14 @@
     .footer-legal { display: flex; gap: 24px; }
     .footer-legal a { font-size: 13px; color: var(--text-light); text-decoration: none; transition: color .3s; }
     .footer-legal a:hover { color: var(--white); }
+    .footer-umanoai {
+      display: flex; align-items: center; gap: 8px;
+      text-decoration: none;
+      opacity: .6; transition: opacity .3s;
+    }
+    .footer-umanoai:hover { opacity: 1; }
+    .footer-umanoai span { font-size: 12px; color: var(--text-light); white-space: nowrap; }
+    .footer-umanoai img { height: 24px; width: auto; object-fit: contain; }
 
     /* ── GOOGLE BADGE ── */
     .google-badge-wrap { text-align: center; margin-bottom: 40px; }
@@ -1429,6 +1437,10 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2025 CleanPaz. Todos los derechos reservados.</div>
+    <a href="https://umanoai.com.ar" target="_blank" rel="noopener" class="footer-umanoai">
+      <span>Diseñado por</span>
+      <img src="umanoai-logo.png" alt="UmanoAI" />
+    </a>
     <div class="footer-legal">
       <a href="#">Política de privacidad</a>
       <a href="#">Términos y condiciones</a>
