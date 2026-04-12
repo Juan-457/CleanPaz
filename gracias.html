@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <title>Solicitud recibida | CleanPaz</title>
+  <style>
+    :root {
+      --bg: #080d1e;
+      --panel: #111827;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --teal: #68ccd1;
+      --green: #7ed957;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(rgba(8, 13, 30, .82), rgba(8, 13, 30, .9)),
+        url("industrial.webp") center / cover no-repeat;
+      color: var(--text);
+    }
+
+    main {
+      width: min(100%, 680px);
+      background: rgba(17, 24, 39, .86);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 8px;
+      padding: clamp(28px, 6vw, 48px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .38);
+    }
+
+    .mark {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--teal), var(--green));
+      color: #06111d;
+      font-size: 30px;
+      font-weight: 900;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(30px, 6vw, 48px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .primary {
+      background: linear-gradient(135deg, var(--teal), var(--green));
+      color: #06111d;
+    }
+
+    .secondary {
+      border: 1px solid rgba(255, 255, 255, .24);
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark">✓</div>
+    <h1>Solicitud recibida</h1>
+    <p>Gracias por contactarte con CleanPaz. El equipo recibió tu consulta y te va a responder a la brevedad.</p>
+    <div class="actions">
+      <a class="primary" href="/">Volver al inicio</a>
+      <a class="secondary" href="https://wa.me/5491128705050?text=Hola!%20Acabo%20de%20completar%20el%20formulario%20web%20de%20CleanPaz." target="_blank" rel="noopener">Seguir por WhatsApp</a>
+    </div>
+  </main>
+</body>
+</html>
