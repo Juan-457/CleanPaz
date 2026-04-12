@@ -349,41 +349,42 @@
     .container { max-width: 1200px; margin: 0 auto; }
     .section-tag {
       display: inline-block;
-      background: rgba(12,14,17,.6);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(104,204,209,.12);
       border: 1px solid rgba(104,204,209,.4);
-      border-radius: 50px; padding: 7px 20px;
-      font-size: 12px; font-weight: 700; color: var(--blue-light);
+      border-radius: 50px; padding: 5px 16px;
+      font-size: 11px; font-weight: 700; color: var(--blue-light);
       text-transform: uppercase; letter-spacing: 2px;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     .section-title {
-      font-size: clamp(32px, 4vw, 56px);
-      font-weight: 900; line-height: 1.2;
-      letter-spacing: -1.5px; margin-bottom: 16px;
-      display: inline-block;
-      background: rgba(12,14,17,.65);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,.09);
-      border-radius: 16px;
-      padding: 12px 28px;
+      font-size: clamp(28px, 3.5vw, 50px);
+      font-weight: 900; line-height: 1.15;
+      letter-spacing: -1px; margin-bottom: 12px;
+      display: block;
     }
     .section-sub {
-      font-size: 17px; color: var(--text);
-      line-height: 1.75; max-width: 580px;
-      display: inline-block;
-      background: rgba(12,14,17,.55);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,.06);
-      border-radius: 14px;
-      padding: 14px 22px;
+      font-size: 16px; color: var(--text);
+      line-height: 1.7; max-width: 100%;
+      display: block; margin: 0;
     }
-    .section-header { margin-bottom: 64px; }
-    .section-header.center { text-align: center; }
-    .section-header.center .section-sub { display: block; margin: 0 auto; }
+    .section-header {
+      margin-bottom: 64px;
+      display: inline-block;
+      background: rgba(12,14,17,.7);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,.1);
+      border-top: 2px solid rgba(104,204,209,.5);
+      border-radius: 20px;
+      padding: 28px 36px;
+    }
+    .section-header.center {
+      text-align: center;
+      display: block;
+      width: fit-content;
+      margin-left: auto; margin-right: auto;
+      margin-bottom: 64px;
+    }
     .section-header.center .section-sub { margin: 0 auto; }
 
     /* ── SERVICES ── */
