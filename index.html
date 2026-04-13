@@ -1132,16 +1132,16 @@
       pointer-events: none;
     }
     .global-bg, .global-bg-overlay { transition: opacity 1.2s ease; }
-    /* All sections after hero need transparent bg to show global bg */
-    #services, #why, #how, #zones, #testimonials, #contact, #instagram {
-      background: transparent !important;
+    /* All sections after hero keep the same dark green bubble background as FAQ */
+    #services, #why, #how, #zones, #testimonials, #faq, #cta, #contact, #instagram {
+      background: var(--bubble-bg) !important;
     }
     footer {
       background: #080d1e !important;
       background-color: #080d1e !important;
     }
     #cta {
-      background: linear-gradient(135deg, rgba(13,53,212,.92) 0%, rgba(104,204,209,0.77) 40%, rgba(62,181,187,.88) 100%) !important;
+      background: var(--bubble-bg) !important;
     }
 
     /* ── WHATSAPP FLOAT ── */
