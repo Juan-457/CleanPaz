@@ -470,6 +470,8 @@
     }
     /* ── SECTION BUBBLES ── */
     .post-hero-shell > section {
+      position: relative;
+      isolation: isolate;
       border-radius: clamp(20px, 2.5vw, 44px);
       overflow: hidden;
       border: 1px solid var(--bubble-border);
@@ -481,6 +483,18 @@
       background: var(--bubble-bg) !important;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
+    }
+    .post-hero-shell > section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(104,204,209,0.07) 0%, transparent 65%);
+    }
+    .post-hero-shell > section > * {
+      position: relative;
+      z-index: 1;
     }
     .section-tag {
       display: inline-block;
