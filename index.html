@@ -180,8 +180,8 @@
       --white: #FFFFFF;
       --grad-main: linear-gradient(135deg, #1e3c40 0%, #68CCD1 100%);
       --grad-dark: linear-gradient(135deg, #0C0E11 0%, #1E2125 100%);
-      --bubble-bg: linear-gradient(135deg, rgba(8,20,32,.88), rgba(14,51,56,.82));
-      --bubble-bg-hover: linear-gradient(135deg, rgba(10,34,43,.94), rgba(18,78,83,.88));
+      --bubble-bg: #080d1e;
+      --bubble-bg-hover: #101938;
       --bubble-border: rgba(104,204,209,.32);
       --bubble-border-strong: rgba(104,204,209,.75);
       --bubble-shadow: 0 24px 72px rgba(0,0,0,.46), inset 0 1px 0 rgba(255,255,255,.07);
@@ -1132,9 +1132,9 @@
       pointer-events: none;
     }
     .global-bg, .global-bg-overlay { transition: opacity 1.2s ease; }
-    /* All sections after hero keep the same dark green bubble background as FAQ */
+    /* All sections after hero keep the previous dark green section background */
     #services, #why, #how, #zones, #testimonials, #faq, #cta, #contact, #instagram {
-      background: var(--bubble-bg) !important;
+      background: linear-gradient(135deg, rgba(8,20,32,.88), rgba(14,51,56,.82)) !important;
     }
     footer {
       background: #080d1e !important;
