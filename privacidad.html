@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad | CleanPaz</title>
+  <meta name="description" content="Política de privacidad de CleanPaz. Conocé cómo recopilamos, usamos y protegemos tus datos personales." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cleanpaz.com.ar/privacidad" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TRW2TPQR');</script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #68CCD1;
+      --blue-dark: #3eb5bb;
+      --dark: #0C0E11;
+      --dark2: #141618;
+      --dark3: #1E2125;
+      --text: #CBD5E1;
+      --text-light: #94A3B8;
+      --white: #FFFFFF;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* NAV */
+    nav {
+      background: rgba(12,14,17,.95);
+      backdrop-filter: blur(12px);
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(104,204,209,.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .nav-logo img { height: 36px; }
+    .nav-logo span {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .nav-back {
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--blue-dark); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0f2a2c 0%, #0C0E11 60%);
+      padding: 72px 32px 56px;
+      text-align: center;
+      border-bottom: 1px solid rgba(104,204,209,.12);
+    }
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .hero p {
+      color: var(--text-light);
+      font-size: 15px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 56px 32px 80px;
+    }
+    .section {
+      margin-bottom: 48px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(104,204,209,.2);
+    }
+    h2 span {
+      color: var(--blue);
+      margin-right: 8px;
+    }
+    p { margin-bottom: 14px; color: var(--text); font-size: 15px; }
+    ul {
+      list-style: none;
+      margin: 12px 0 14px 0;
+    }
+    ul li {
+      font-size: 15px;
+      color: var(--text);
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: var(--dark3);
+      border: 1px solid rgba(104,204,209,.2);
+      border-left: 3px solid var(--blue);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark2);
+      border-top: 1px solid rgba(104,204,209,.12);
+      text-align: center;
+      padding: 32px;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+    footer a { color: var(--blue); }
+
+    @media (max-width: 600px) {
+      .container { padding: 40px 20px 60px; }
+      .hero { padding: 48px 20px 40px; }
+      nav { padding: 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRW2TPQR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <nav>
+    <a href="/" class="nav-logo">
+      <img src="logo.png" alt="CleanPaz logo" />
+      <span>CleanPaz</span>
+    </a>
+    <a href="/" class="nav-back">← Volver al inicio</a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-eyebrow">Legal</div>
+    <h1>Política de Privacidad</h1>
+    <p>Última actualización: abril de 2026</p>
+  </div>
+
+  <div class="container">
+
+    <div class="section">
+      <h2><span>01.</span>Responsable del tratamiento</h2>
+      <p><strong style="color:var(--white)">CleanPaz</strong> es responsable del tratamiento de los datos personales recopilados a través del sitio web <a href="https://cleanpaz.com.ar">cleanpaz.com.ar</a>.</p>
+      <p>Para consultas sobre privacidad podés contactarnos en: <a href="mailto:info@cleanpaz.com.ar">info@cleanpaz.com.ar</a></p>
+    </div>
+
+    <div class="section">
+      <h2><span>02.</span>Datos que recopilamos</h2>
+      <p>Recopilamos únicamente los datos que vos nos proporcionás de manera voluntaria a través del formulario de contacto:</p>
+      <ul>
+        <li>Nombre y apellido</li>
+        <li>Dirección de correo electrónico</li>
+        <li>Número de teléfono o WhatsApp</li>
+        <li>Empresa u organización (opcional)</li>
+        <li>Mensaje o descripción del servicio requerido</li>
+      </ul>
+      <p>Adicionalmente, recopilamos de forma automática datos de navegación a través de cookies y herramientas de análisis (ver sección 5).</p>
+    </div>
+
+    <div class="section">
+      <h2><span>03.</span>Finalidad del tratamiento</h2>
+      <p>Usamos tus datos exclusivamente para:</p>
+      <ul>
+        <li>Responder a tu solicitud de cotización o consulta</li>
+        <li>Brindar información sobre nuestros servicios de limpieza</li>
+        <li>Coordinar visitas o presupuestos personalizados</li>
+        <li>Mejorar la experiencia de navegación en el sitio</li>
+      </ul>
+      <div class="highlight-box">
+        No enviamos spam ni correos comerciales no solicitados. Tus datos no serán utilizados para fines distintos a los indicados sin tu consentimiento previo.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span>04.</span>Compartición de datos</h2>
+      <p>CleanPaz <strong style="color:var(--white)">no vende ni cede tus datos personales a terceros</strong>. Los datos pueden ser accedidos por:</p>
+      <ul>
+        <li>El equipo interno de CleanPaz para gestionar tu consulta</li>
+        <li>Proveedores de servicios tecnológicos (hosting, formularios) bajo acuerdos de confidencialidad</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span>05.</span>Cookies y herramientas de análisis</h2>
+      <p>Este sitio utiliza las siguientes herramientas de terceros que pueden instalar cookies:</p>
+      <ul>
+        <li><strong style="color:var(--white)">Google Analytics 4</strong> — para analizar el tráfico y comportamiento en el sitio de forma anónima</li>
+        <li><strong style="color:var(--white)">Google Tag Manager</strong> — para gestionar etiquetas de seguimiento</li>
+        <li><strong style="color:var(--white)">Google Ads</strong> — para medir el rendimiento de campañas publicitarias</li>
+      </ul>
+      <p>Estos servicios están sujetos a la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a>. Podés optar por no ser rastreado instalando la <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">extensión de inhabilitación de Google Analytics</a>.</p>
+    </div>
+
+    <div class="section">
+      <h2><span>06.</span>Conservación de los datos</h2>
+      <p>Conservamos tus datos personales únicamente durante el tiempo necesario para responder a tu consulta. Si no se establece una relación comercial, los datos se eliminan dentro de los 90 días posteriores al primer contacto.</p>
+    </div>
+
+    <div class="section">
+      <h2><span>07.</span>Tus derechos</h2>
+      <p>De acuerdo con la Ley 25.326 de Protección de Datos Personales de Argentina, tenés derecho a:</p>
+      <ul>
+        <li>Acceder a tus datos personales en nuestra posesión</li>
+        <li>Rectificar datos inexactos o incompletos</li>
+        <li>Solicitar la eliminación de tus datos</li>
+        <li>Oponerte al tratamiento de tus datos</li>
+      </ul>
+      <p>Para ejercer estos derechos, escribinos a <a href="mailto:info@cleanpaz.com.ar">info@cleanpaz.com.ar</a>.</p>
+    </div>
+
+    <div class="section">
+      <h2><span>08.</span>Seguridad</h2>
+      <p>Implementamos medidas técnicas y organizativas para proteger tus datos contra accesos no autorizados, pérdida o alteración. El sitio utiliza protocolo HTTPS para cifrar toda la comunicación.</p>
+    </div>
+
+    <div class="section">
+      <h2><span>09.</span>Cambios en esta política</h2>
+      <p>Podemos actualizar esta política de privacidad periódicamente. Te notificaremos de cambios significativos publicando la nueva versión en esta misma página con la fecha de actualización.</p>
+    </div>
+
+    <div class="section">
+      <h2><span>10.</span>Contacto</h2>
+      <p>Si tenés dudas sobre esta política de privacidad, podés contactarnos:</p>
+      <ul>
+        <li>Email: <a href="mailto:info@cleanpaz.com.ar">info@cleanpaz.com.ar</a></li>
+        <li>Sitio web: <a href="https://cleanpaz.com.ar">cleanpaz.com.ar</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 CleanPaz. Todos los derechos reservados. | <a href="/">Volver al inicio</a></p>
+  </footer>
+</body>
+</html>
