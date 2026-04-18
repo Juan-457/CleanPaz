@@ -163,16 +163,16 @@
       --blue-light: #7AB3E0;
       --teal: #468CC8;
       --teal-dark: #2D6FA3;
-      --dark: #0C0E11;
-      --dark2: #141618;
-      --dark3: #1E2125;
+      --dark: #0A1422;
+      --dark2: #0E1C2C;
+      --dark3: #152233;
       --text: #CBD5E1;
       --text-light: #94A3B8;
       --white: #FFFFFF;
       --grad-main: linear-gradient(135deg, #0F1E35 0%, #468CC8 100%);
       --grad-dark: linear-gradient(135deg, #0C0E11 0%, #1E2125 100%);
-      --bubble-bg: #080d1e;
-      --bubble-bg-hover: #101938;
+      --bubble-bg: #0C1D2E;
+      --bubble-bg-hover: #122840;
       --bubble-border: rgba(70,140,200,.32);
       --bubble-border-strong: rgba(70,140,200,.75);
       --bubble-shadow: 0 24px 72px rgba(0,0,0,.46), inset 0 1px 0 rgba(255,255,255,.07);
@@ -194,14 +194,14 @@
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       padding: 16px 0;
-      background: rgba(8,13,30,.92);
+      background: rgba(12,29,46,.92);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(255,255,255,.06);
       transition: all .4s ease;
     }
     nav.scrolled {
-      background: rgba(8,13,30,.92);
+      background: rgba(12,29,46,.92);
       backdrop-filter: blur(20px);
       padding: 10px 0;
       border-bottom: 1px solid rgba(255,255,255,.06);
@@ -268,7 +268,7 @@
     .hero-bg {
       position: absolute; inset: 0; z-index: 1;
       background:
-        linear-gradient(to bottom, rgba(8,13,30,.55) 0%, rgba(8,13,30,.2) 50%, rgba(8,13,30,.7) 100%),
+        linear-gradient(to bottom, rgba(12,29,46,.55) 0%, rgba(12,29,46,.2) 50%, rgba(12,29,46,.7) 100%),
         radial-gradient(ellipse 70% 50% at 30% 50%, rgba(70,140,200,0.21) 0%, transparent 70%);
     }
     .hero-video {
@@ -481,7 +481,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(70,140,200,0.07) 0%, transparent 65%);
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(70,140,200,0.13) 0%, transparent 65%);
     }
     .post-hero-shell > section > * {
       position: relative;
@@ -546,9 +546,9 @@
     .services-overlay {
       position: absolute; inset: 0; z-index: 1;
       background: linear-gradient(to bottom,
-        rgba(15,22,40,.88) 0%,
-        rgba(15,22,40,.80) 50%,
-        rgba(15,22,40,.92) 100%);
+        rgba(12,29,46,.88) 0%,
+        rgba(12,29,46,.80) 50%,
+        rgba(12,29,46,.92) 100%);
     }
     #services .container { position: relative; z-index: 2; }
     .services-grid {
@@ -774,7 +774,7 @@
     #testimonials::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(70,140,200,0.07) 0%, transparent 65%);
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(70,140,200,0.13) 0%, transparent 65%);
       pointer-events: none;
     }
     .testimonials-grid {
@@ -826,7 +826,7 @@
     #faq::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(70,140,200,0.07) 0%, transparent 65%);
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(70,140,200,0.13) 0%, transparent 65%);
       pointer-events: none;
     }
     #faq .container { position: relative; z-index: 1; }
