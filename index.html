@@ -171,8 +171,10 @@
       --white: #FFFFFF;
       --grad-main: linear-gradient(135deg, #0F1E35 0%, #468CC8 100%);
       --grad-dark: linear-gradient(135deg, #0C0E11 0%, #1E2125 100%);
-      --bubble-bg: #0C1D2E;
-      --bubble-bg-hover: #122840;
+      --bubble-bg: linear-gradient(135deg, #071B30 0%, #0A2744 52%, #0D335A 100%);
+      --bubble-bg-hover: linear-gradient(135deg, #0A2542 0%, #103B63 55%, #14517F 100%);
+      --bubble-bg-solid: #0B223A;
+      --bubble-bg-solid-hover: #10314F;
       --bubble-border: rgba(70,140,200,.32);
       --bubble-border-strong: rgba(70,140,200,.75);
       --bubble-shadow: 0 24px 72px rgba(0,0,0,.46), inset 0 1px 0 rgba(255,255,255,.07);
@@ -387,7 +389,7 @@
       position: relative; display: flex; align-items: center; justify-content: center;
     }
     .hero-card-main {
-      background: var(--bubble-bg);
+      background: var(--bubble-bg-solid);
       border: 1px solid var(--bubble-border);
       border-top: 2px solid var(--bubble-border-strong);
       backdrop-filter: var(--bubble-blur);
@@ -431,7 +433,7 @@
 
     .float-card {
       position: absolute;
-      background: var(--bubble-bg);
+      background: var(--bubble-bg-solid);
       border: 1px solid var(--bubble-border);
       border-top: 2px solid var(--bubble-border-strong);
       backdrop-filter: var(--bubble-blur);
@@ -557,7 +559,7 @@
       gap: 24px;
     }
     .service-card {
-      background: var(--bubble-bg);
+      background: var(--bubble-bg-solid);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--bubble-border);
@@ -643,7 +645,7 @@
 
     .why-visual { position: relative; }
     .stats-card {
-      background: var(--bubble-bg);
+      background: var(--bubble-bg-solid);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
       border: 1px solid var(--bubble-border);
@@ -745,7 +747,7 @@
       gap: 20px;
     }
     .zone-card {
-      background: var(--bubble-bg);
+      background: var(--bubble-bg-solid);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--bubble-border);
@@ -782,7 +784,7 @@
       gap: 28px;
     }
     .testimonial-card {
-      background: var(--bubble-bg);
+      background: var(--bubble-bg-solid);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--bubble-border);
@@ -836,7 +838,7 @@
       gap: 20px;
     }
     .faq-item {
-      background: var(--bubble-bg);
+      background: var(--bubble-bg-solid);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--bubble-border);
@@ -953,7 +955,7 @@
     .contact-item-value a:hover { color: var(--teal); }
 
     .contact-form {
-      background: var(--bubble-bg);
+      background: var(--bubble-bg-solid);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
       border: 1px solid var(--bubble-border);
@@ -1125,7 +1127,7 @@
     .global-bg, .global-bg-overlay { transition: opacity 1.2s ease; }
     /* All sections after hero keep the previous dark green section background */
     #services, #why, #how, #zones, #testimonials, #faq, #cta, #contact, #instagram {
-      background: linear-gradient(135deg, rgba(8,20,32,.88), rgba(14,51,56,.82)) !important;
+      background: linear-gradient(135deg, rgba(7,24,42,.9), rgba(14,58,96,.84)) !important;
     }
     footer {
       background: #080d1e !important;
