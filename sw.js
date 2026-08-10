@@ -1,4 +1,4 @@
-const CACHE = 'cleanpaz-v1'
+const CACHE = 'cleanpaz-v2'
 const STATIC = [
   '/',
   '/industrial.webp',

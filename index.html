@@ -97,4 +97,59 @@ button.textContent = 'Enviando...';
 sendGTMEvent('form_submit');
 return true;
 }
+</script><script>
+(function(){
+const TRACK_KEYS=['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+const STORAGE_KEY='cleanpaz_tracking';
+function readStored(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')}catch(e){return {}}}
+function clean(v){return String(v||'').replace(/\s+/g,' ').trim().slice(0,220)}
+const params=new URLSearchParams(window.location.search);
+const tracking=readStored();
+TRACK_KEYS.forEach(k=>{if(params.get(k)) tracking[k]=clean(params.get(k))});
+tracking.landing_page=clean(location.href);
+tracking.referrer=clean(document.referrer||tracking.referrer||'');
+tracking.last_seen_at=new Date().toISOString();
+try{localStorage.setItem(STORAGE_KEY,JSON.stringify(tracking))}catch(e){}
+function getIntent(){
+const campaign=(tracking.utm_campaign||'').toLowerCase();
+const term=(tracking.utm_term||'').toLowerCase();
+const text=(campaign+' '+term);
+if(text.includes('post')||text.includes('obra')) return 'limpieza post-obra';
+if(text.includes('industrial')||text.includes('planta')||text.includes('parque')) return 'limpieza industrial';
+if(text.includes('consor')) return 'limpieza para consorcio';
+if(text.includes('oficina')||text.includes('empresa')) return 'limpieza para empresa/oficina';
+if(text.includes('verde')||text.includes('jardin')) return 'mantenimiento de espacios verdes';
+return 'limpieza profesional';
+}
+function trackingLines(){
+return TRACK_KEYS.filter(k=>tracking[k]).map(k=>k+'='+tracking[k]).join(' | ');
+}
+function waMessage(locationName){
+const lines=[
+'Hola, quiero cotizar '+getIntent()+'.',
+'Vengo desde cleanpaz.com.ar.',
+'Origen: '+(tracking.utm_source||'web')+' / '+(tracking.utm_campaign||'sin-campana')+' / '+locationName
+];
+const meta=trackingLines();
+if(meta) lines.push('Tracking: '+meta);
+return lines.join('\n');
+}
+document.querySelectorAll('a[href*="wa.me/5491128705050"]').forEach((a,i)=>{
+const loc=(a.getAttribute('onclick')||a.className||a.textContent||('wa_'+i)).toString().replace(/[^\w-]+/g,'_').slice(0,40)||('wa_'+i);
+const url=new URL(a.href);
+url.searchParams.set('text',waMessage(loc));
+a.href=url.toString();
+a.addEventListener('click',()=>{if(window.dataLayer){window.dataLayer.push({event:'whatsapp_click',click_location:loc,...tracking})}});
+});
+const form=document.getElementById('contactForm');
+if(form){
+Object.entries(tracking).forEach(([key,value])=>{
+if(!value) return;
+let input=form.querySelector('input[name="'+key+'"]');
+if(!input){input=document.createElement('input');input.type='hidden';input.name=key;form.appendChild(input)}
+input.value=value;
+});
+form.addEventListener('submit',()=>{if(window.dataLayer){window.dataLayer.push({event:'lead_form_submit',...tracking})}});
+}
+})();
 </script><script>if("serviceWorker"in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js"))}</script></body></html>

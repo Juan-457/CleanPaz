@@ -104,5 +104,25 @@
       <a class="secondary" href="https://wa.me/5491128705050?text=Hola!%20Acabo%20de%20completar%20el%20formulario%20web%20de%20CleanPaz." target="_blank" rel="noopener">Seguir por WhatsApp</a>
     </div>
   </main>
+  <script>
+    (function () {
+      var tracking = {};
+      try { tracking = JSON.parse(localStorage.getItem("cleanpaz_tracking") || "{}"); } catch (e) {}
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({ event: "lead_form_thankyou" }, tracking));
+      var wa = document.querySelector('a[href*="wa.me/5491128705050"]');
+      if (!wa) return;
+      var parts = [
+        "Hola, acabo de completar el formulario web de CleanPaz.",
+        "Vengo desde cleanpaz.com.ar."
+      ];
+      if (tracking.utm_source || tracking.utm_campaign) {
+        parts.push("Origen: " + (tracking.utm_source || "web") + " / " + (tracking.utm_campaign || "sin-campana"));
+      }
+      var url = new URL(wa.href);
+      url.searchParams.set("text", parts.join("\n"));
+      wa.href = url.toString();
+    })();
+  </script>
 </body>
 </html>
